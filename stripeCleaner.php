@@ -1,7 +1,8 @@
 <?php
 
+include 'config.php';
+
 ini_set('max_execution_time', 0);
-$sk = '';
 
 for ($i=0; $i < 100; $i++) { 
     $ch1 = curl_init();
