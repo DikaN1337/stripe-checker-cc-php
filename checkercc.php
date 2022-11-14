@@ -1,5 +1,7 @@
 <?php
 		
+		include 'config.php';
+
 		if (!isset($_GET['cc']) || empty($_GET['cc'])) {
 			$json = array("response" => "No Valid CC inserted");
 			$json_encoded = json_encode($json);
@@ -16,8 +18,6 @@
 		$cvv = $i[3];
 		$bin = substr($cc, 0, 8);
 		$last4 = substr($cc, 12, 16);
-
-		$sk = "";
 
 
 		$ch1 = curl_init();
